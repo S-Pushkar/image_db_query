@@ -21,7 +21,7 @@ class Item(BaseModel):
     text: str
 
 @app.post("/querytext/")
-def query_text(item: Item):
+async def query_text(item: Item):
     vectors = model.encode(item.text)
 
     expr = f'email == "{item.email}"'
