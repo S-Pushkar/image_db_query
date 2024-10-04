@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from sentence_transformers import SentenceTransformer
 from pymilvus import connections, Collection
 from dotenv import load_dotenv
@@ -17,7 +17,7 @@ COLLECTION_NAME = "ocr_text_vectors"
 collection = Collection(COLLECTION_NAME)
 
 class Item(BaseModel):
-    email: str
+    email: EmailStr
     text: str
 
 @app.post("/querytext/")
