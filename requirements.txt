@@ -17,6 +17,7 @@ huggingface-hub==0.24.7
 idna==3.9
 Jinja2==3.1.4
 joblib==1.4.2
+kafka-python-ng==2.2.3
 MarkupSafe==2.1.5
 marshmallow==3.22.0
 milvus-lite==2.4.10
